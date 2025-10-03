@@ -9,11 +9,17 @@ use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
+
+
+    
     /**
      * Seed the application's database.
      */
     public function run(): void
     {
+        $this->call([
+            JapaneseSeeder::class,
+        ]);
         // User::factory(10)->create();
 
         User::firstOrCreate(
